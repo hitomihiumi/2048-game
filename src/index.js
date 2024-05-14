@@ -1,0 +1,1 @@
+module.exports.Game = require('./game/game')

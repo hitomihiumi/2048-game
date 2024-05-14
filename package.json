@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@hitomihiumi/lazy-canvas": "^0.7.0"
+  },
+  "name": "@hitomihiumi/2048-game",
+  "version": "0.6.0",
+  "description": "simple 2048 game module, using lazy-canvas",
+  "main": "src/game/game.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "author": "hitomihiumi",
+  "license": "ISC"
+}
