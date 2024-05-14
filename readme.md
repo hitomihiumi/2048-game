@@ -1,3 +1,6 @@
+<a href="https://www.npmjs.com/package/@hitomihiumi/2048-game"><img src="https://img.shields.io/npm/v/@hitomihiumi/2048-game.svg?maxAge=3600" alt="npm version" /></a>
+<a href="https://www.npmjs.com/package/@hitomihiumi/2048-game"><img src="https://img.shields.io/npm/dt/@hitomihiumi/2048-game.svg?maxAge=3600" alt="npm downloads" /></a>
+
 # Introduction
 
 This is a simple logic and rendering module for the game 2048, it is mainly intended for users of discord.js etc. The module uses `@hitomihiumi/lazy-canvas` to render the image.
