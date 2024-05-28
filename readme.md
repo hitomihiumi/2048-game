@@ -211,4 +211,4 @@ Sets the thickness of the cell number stroke line. The default value is 4.
 game.setFilled(true);
 ```
 
-Sets whether the cell number is filled or not. The default value is true.
+Sets whether the cell number is filled or not. The default value is false.
