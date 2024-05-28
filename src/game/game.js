@@ -97,6 +97,14 @@ class Game {
 
     importData(data) {
         if (typeof data !== 'object') throw new Error('\'data\' can be only object!')
+
+        if (data.tilescolors === undefined) data.tilescolors = this.data.tilescolors;
+        if (data.lineThickness === undefined) data.lineThickness = this.data.lineThickness;
+        if (data.filled === undefined) data.filled = this.data.filled;
+        if (data.font === undefined) data.font = this.data.font;
+        if (data.globaloffset === undefined) data.globaloffset = this.data.globaloffset;
+        if (data.offsets === undefined) data.offsets = this.data.offsets;
+
         this.data = data
         return this;
     }
