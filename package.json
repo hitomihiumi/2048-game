@@ -3,7 +3,7 @@
     "@hitomihiumi/lazy-canvas": "^0.7.0"
   },
   "name": "@hitomihiumi/2048-game",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "simple 2048 game module, using lazy-canvas",
   "main": "src/game/game.js",
   "scripts": {

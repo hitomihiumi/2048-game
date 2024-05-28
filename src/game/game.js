@@ -122,8 +122,8 @@ class Game {
     };
 
     async startGame() {
-        console.log(renderGame)
-        console.log(this.renderGame)
+        //console.log(renderGame)
+        //console.log(this.renderGame)
         if (this.data._tiles === null) {
             this.data._tiles = []
 
@@ -141,7 +141,7 @@ class Game {
             this.reset();
         }
 
-        return await this.renderGame(this)
+        return await this.gameUpdate('start')
     }
 
     async move(direction) {
@@ -232,7 +232,7 @@ class Game {
         for (let a = 0; a < this.data._tiles.length; a++) {
             for (let b = 0; b < this.data._tiles[a].length; b++) {
                 if (this.data._tiles[a][b] === 2048) {
-                    return 'win';
+                    return await this.gameUpdate('win');
                 }
             }
         }
@@ -246,6 +246,10 @@ class Game {
         let canvas = await this.renderGame(this)
 
         switch (status) {
+            case 'start':
+                return [ 'start', canvas ]
+            case 'win':
+                return [ 'win', canvas ]
             case 'nochange':
                 return [ 'nochange', canvas ]
             case 'gameover':

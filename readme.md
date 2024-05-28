@@ -40,7 +40,7 @@ Set the size of the game board. The default value is 4.
 ```js
 await game.startGame(); 
 ```
-Returns canvas buffer. You can use this buffer in AttachmentBuilder (for discord.js), or save it to file by 'fs'.
+Returns object with 'status' and canvas buffer. You can use this buffer in AttachmentBuilder (for discord.js), or save it to file by 'fs'.
 
 #### move()
 ```js
@@ -52,12 +52,20 @@ await game.move('right'); // Move the tiles right
 
 Returns object with 'status' and 'canvas' properties.
 'status' is a string, 'canvas' is a canvas buffer.
-'status' can be 'gameover', 'nochange' or 'move'.
+'status' can be 'start', 'win', 'gameover', 'nochange' or 'move'.
 
 <table>
     <tr>
         <td>Status</td>
         <td>Meaning</td>
+    </tr>
+    <tr>
+        <td>start</td>
+        <td>Signals the start of the game</td>
+    </tr>
+    <tr>
+        <td>win</td>
+        <td>Signals a player's victory</td>
     </tr>
     <tr>
         <td>gameover</td>
