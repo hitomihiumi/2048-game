@@ -6,6 +6,8 @@ async function renderGame(game) {
 
     let canvasSize = game.data.size * 75;
 
+    //console.log(game)
+
     var canvas = new LazyCanvas()
         .createNewCanvas(canvasSize, canvasSize)
 

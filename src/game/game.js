@@ -7,6 +7,7 @@ class Game {
 
     constructor(data = {}) {
         this.data = { ...data }
+
         this.data.userId ??= null;
         this.data.size ??= 4;
         this.data._tiles ??= null;
@@ -98,14 +99,16 @@ class Game {
     importData(data) {
         if (typeof data !== 'object') throw new Error('\'data\' can be only object!')
 
-        if (data.tilescolors === undefined) data.tilescolors = this.data.tilescolors;
-        if (data.lineThickness === undefined) data.lineThickness = this.data.lineThickness;
-        if (data.filled === undefined) data.filled = this.data.filled;
-        if (data.font === undefined) data.font = this.data.font;
-        if (data.globaloffset === undefined) data.globaloffset = this.data.globaloffset;
-        if (data.offsets === undefined) data.offsets = this.data.offsets;
+        let newData = { ...data }
 
-        this.data = data
+        if (data?.tilescolors === undefined) newData.tilescolors = this.data.tilescolors;
+        if (data?.lineThickness === undefined) newData.lineThickness = this.data.lineThickness;
+        if (data?.filled === undefined) newData.filled = this.data.filled;
+        if (data?.font === undefined) newData.font = this.data.font;
+        if (data?.globaloffset === undefined) newData.globaloffset = this.data.globaloffset;
+        if (data?.offsets === undefined) newData.offsets = this.data.offsets;
+
+        this.data = newData
         return this;
     }
 
@@ -132,7 +135,12 @@ class Game {
     async startGame() {
         //console.log(renderGame)
         //console.log(this.renderGame)
-        if (this.data._tiles === null) {
+
+        if (this.data.size === undefined) this.data.size = 4;
+        if (this.data._score === undefined) this.data._score = 0;
+        if (this.data._step === undefined) this.data._step = 0
+
+        if (this.data._tiles === null || this.data._tiles === undefined) {
             this.data._tiles = []
 
             for (let y = 0; y < this.data.size; y++) {
