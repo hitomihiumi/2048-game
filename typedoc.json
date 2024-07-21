@@ -1,0 +1,13 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src/index.ts"],
+  "out": "docs-out",
+  "name": "2048 Game",
+  "includeVersion": true,
+  "plugin": ["typedoc-material-theme", "typedoc-plugin-extras"],
+  "favicon": "./gitignore/favicon.ico",
+  "customTitle": "2048 Game",
+  "themeColor": "#ff8a8a",
+  "theme": "default",
+  "readme": "readme.md"
+}

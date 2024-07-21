@@ -1,0 +1,15 @@
+.idea
+node_modules
+test/
+docs-out/
+src/
+
+*.ts
+!*.d.ts
+tsconfig.json
+package-lock.json
+typedoc.json
+2048-game.iml
+
+fonts
+gitignore

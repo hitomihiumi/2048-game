@@ -1,14 +1,26 @@
 {
   "dependencies": {
-    "@hitomihiumi/lazy-canvas": "^0.7.0"
+    "@hitomihiumi/lazy-canvas": "^1.2.1"
+  },
+  "devDependencies": {
+    "typedoc": "^0.26.4",
+    "typedoc-material-theme": "^1.1.0",
+    "typedoc-plugin-extras": "^3.1.0",
+    "typedoc-plugin-markdown": "^4.2.1",
+    "typescript": "^5.4.5"
   },
   "name": "@hitomihiumi/2048-game",
-  "version": "0.6.3",
+  "version": "1.0.0",
   "description": "simple 2048 game module, using lazy-canvas",
-  "main": "src/game/game.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "node ./test/test.js"
   },
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
   "author": "hitomihiumi",
-  "license": "ISC"
+  "license": "MIT"
 }

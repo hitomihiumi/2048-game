@@ -1,6 +1,9 @@
-2048-game.iml
 /fonts/
 /gitignore/
 /.idea/
 /node_modules/
+dist/
+docs-out/
+
 package-lock.json
+2048-game.iml
