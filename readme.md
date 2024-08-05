@@ -12,6 +12,8 @@ This is a simple logic and rendering module for the game 2048, it is mainly inte
 
 ## Documentation
 
+You can find the documentation [here](https://hitomihiumi.xyz/)
+
 ### Game - class
 
 Initialize class to create a new game.
