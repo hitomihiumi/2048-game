@@ -125,12 +125,16 @@ export class Game {
 
         let newData = { ...data }
 
-        if (data?.tilescolors === undefined) newData.tilescolors = this.data.tilescolors;
-        if (data?.lineThickness === undefined) newData.lineThickness = this.data.lineThickness;
-        if (data?.filled === undefined) newData.filled = this.data.filled;
-        if (data?.font === undefined) newData.font = this.data.font;
-        if (data?.globaloffset === undefined) newData.globaloffset = this.data.globaloffset;
-        if (data?.offsets === undefined) newData.offsets = this.data.offsets;
+        if (data.tilescolors === undefined) newData.tilescolors = this.data.tilescolors;
+        if (data.lineThickness === undefined) newData.lineThickness = this.data.lineThickness;
+        if (data.filled === undefined) newData.filled = this.data.filled;
+        if (data.font === undefined) newData.font = this.data.font;
+        else if (data.font instanceof Font) newData.font = data.font;
+        else { // @ts-ignore
+            newData.font = new Font().setFamily(data.font.family).setWeight(data.font.weight).setPath(data.font.path);
+        }
+        if (data.globaloffset === undefined) newData.globaloffset = this.data.globaloffset;
+        if (data.offsets === undefined) newData.offsets = this.data.offsets;
 
         this.data = newData
         return this;

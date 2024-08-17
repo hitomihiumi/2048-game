@@ -1,4 +1,4 @@
-import { Game, LazyGame } from '../dist'
+import { Game, LazyGame } from '../src'
 import * as fs from 'fs'
 import { Font } from '@hitomihiumi/lazy-canvas'
 

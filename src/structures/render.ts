@@ -42,6 +42,7 @@ export async function renderGame(game: any) {
                     .setColor(getColor(game, tileValue))
 
                 if (game.data.font) {
+                    //console.log(game.data.font)
                     canvas.loadFonts(game.data.font)
 
                     text.setFont(game.data.font.toJSON().family)
